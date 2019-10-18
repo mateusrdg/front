@@ -1,5 +1,11 @@
-<button mat-button [matMenuTriggerFor]="menu">Menu</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
-</mat-menu>
+	
+<div style="padding: 20px;">
+  <h1 style="color: blue">grokonez.com</h1>
+  <h3>{{title}}</h3>
+  <nav>
+    <a routerLink="funcionario" class="btn btn-primary active" role="button" routerLinkActive="active">Funcionarios</a>
+    <a routerLink="add" class="btn btn-primary active" role="button" routerLinkActive="active">Add</a>
+    <a routerLink="findbyage" class="btn btn-primary active" role="button" routerLinkActive="active">Search</a>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

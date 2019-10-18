@@ -1,0 +1,8 @@
+<h3>Funcionarios</h3>
+<div *ngFor="let funcionario of funcionarios | async" style="width: 300px;">
+  <app-funcionario-details [funcionario]='funcionario'></app-funcionario-details>
+</div>
+ 
+<div>
+  <button type="button" class="button btn-danger" (click)='deleteFuncionario()'>Delete All</button>
+</div>
