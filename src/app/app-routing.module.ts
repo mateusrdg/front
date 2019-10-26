@@ -1,14 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { FuncionariosListComponent } from 'src/app/funcionarios-list/funcionarios-list.component';
-import { CreateFuncionarioComponent } from 'src/app/create-funcionario/create-funcionario.component';
-import { SearchFuncionariosComponent } from 'src/app/search-funcionarios/search-funcionarios.component';
+import { ListaFuncionarioComponent } from './paginas/lista-funcionario/lista-funcionario.component';
 
-
-const routes: Routes = [{ path: '', redirectTo: 'funcionario', pathMatch: 'full' },
-{ path: 'funcionario', component: FuncionariosListComponent },
-{ path: 'add', component: CreateFuncionarioComponent },
-{ path: 'findbyid', component: SearchFuncionariosComponent },];
+const routes: Routes = [{path: '', component: ListaFuncionarioComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

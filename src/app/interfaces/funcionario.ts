@@ -1,5 +1,3 @@
-import { type } from 'os';
-
 type tipo = 'GERENTE' | 'VENDEDOR';
 export interface Funcionario {
     id: number;
