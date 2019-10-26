@@ -9,6 +9,6 @@ export class AppComponent {
   public todos: any[] = [];
   title = 'sistema';
 
-  constructor(){  
+  constructor() {
   }
 }
