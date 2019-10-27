@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { ErrorMsgComponent } from './compartilhado/error-msg/error-msg.component';
 import { ListaFuncionarioComponent } from './paginas/lista-funcionario/lista-funcionario.component';
 import { FormFuncionarioComponent } from './compartilhado/form-funcionario/form-funcionario.component';
+import {FormsModule} from '@angular/forms';
+import { CriarFuncionarioComponent } from './paginas/criar-funcionario/criar-funcionario.component';
 
 @NgModule({
   declarations: [
@@ -13,11 +15,13 @@ import { FormFuncionarioComponent } from './compartilhado/form-funcionario/form-
     ErrorMsgComponent,
     ListaFuncionarioComponent,
     FormFuncionarioComponent,
+    CriarFuncionarioComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

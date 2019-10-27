@@ -1,1 +1,39 @@
-<p>form-funcionario works!</p>
+<form #f= "ngForm" (ngSubmit) = "onSubmit()">
+    <div class= "form-group">
+        <label for="tipo"> Tipo </label>
+        <select
+            #tipo="ngModel"
+            class="form-control"
+            [class.is-invalid]="!tipo.valid && tipo.touched"
+            id="tipo"
+            name="tipo"
+            [(ngModel)]="funcionario.tipoFuncionario"
+            required>
+            <option [ngValue]= "undefined">Selecione...</option>
+            <option value= "GERENTE"> GERENTE </option>
+            <option value= "VENDEDOR"> VENDEDOR </option>
+        </select>
+        <div *ngIf="!tipo.valid && tipo.touched" class= "invalid-feedback" >
+            Selecione o tipo
+        </div>
+    </div>
+    <div class= "form-group">
+        <label for= "nome">Funcionario</label>
+    </div>
+    <textarea
+        class="form-control"
+        id="nome"
+        rows="3"
+        placeholder="Seu nome...." name= "nome"
+        #nome="ngModel"
+        [(ngModel)]="funcionario.nome"
+        [class.is-invalid]="!nome.valid && nome.touched"
+        required>
+    </textarea>
+    <div *ngIf="!nome.valid && nome.touched" class="text-danger">
+        Diga seu nome infeliz.
+    </div>
+    <button class= "btn btn-primary" type= "submit" [disabled]="!f.valid"> Salvar </button>
+</form>
+
+
