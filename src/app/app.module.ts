@@ -8,6 +8,7 @@ import { ListaFuncionarioComponent } from './paginas/lista-funcionario/lista-fun
 import { FormFuncionarioComponent } from './compartilhado/form-funcionario/form-funcionario.component';
 import {FormsModule} from '@angular/forms';
 import { CriarFuncionarioComponent } from './paginas/criar-funcionario/criar-funcionario.component';
+import { EditarFuncionarioComponent } from './paginas/editar-funcionario/editar-funcionario.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { CriarFuncionarioComponent } from './paginas/criar-funcionario/criar-fun
     ListaFuncionarioComponent,
     FormFuncionarioComponent,
     CriarFuncionarioComponent,
+    EditarFuncionarioComponent,
   ],
   imports: [
     BrowserModule,
